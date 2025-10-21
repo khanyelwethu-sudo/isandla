@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ISANDLA: THE ISLAND SPEAKS</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌀</text></svg>">
+</head>
+<body>
+
+  <!-- Background Effects -->
+  <div class="wave-bg"></div>
+  <div id="particles-js"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#arrival">Arrival</a></li>
+      <li><a href="#village">Village</a></li>
+      <li><a href="#warning">Warning</a></li>
+      <li><a href="#umoya">uMoya Speaks</a></li>
+      <li><a href="#story">The Story</a></li>
+      <li><a href="#corrupted">Data Corrupted</a></li>
+      <li><a href="#voices">Voices of Azania</a></li>
+      <li><a href="#scan">Scan to Listen</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <header id="home">
+    <div class="container home-content">
+      <h1>ISANDLA</h1>
+      <p>The land remembers.<br>Even when maps forget.</p>
+    </div>
+  </header>
+
+  <!-- Arrival -->
+  <section id="arrival">
+    <div class="container">
+      <h2>The Arrival</h2>
+      <p>Dr. Lena van der Merwe survives a violent storm. Her research vessel is destroyed. She washes ashore on a remote island—uninvited, unprepared, and unaware.</p>
+      <div class="storm-animation">⚡🌊🌀</div>
+      <p>The island breathes beneath her feet. The ocean watches.</p>
+    </div>
+  </section>
+
+  <!-- Village -->
+  <section id="village">
+    <div class="container">
+      <h2>The Village of Azania</h2>
+      <p>A self-sustaining society shaped by resilience. Dome homes inspired by traditional rondavels are woven with solar bark-fiber. Knowledge flows through drum codes, star navigation, and ancestral song. This is not primitive—it is advanced.</p>
+      <div class="village-grid">
+        <div class="village-card">
+          <h3>Solar Rondavels</h3>
+          <p>Energy harvested from sun, wind, and memory.</p>
+        </div>
+        <div class="village-card">
+          <h3>Herb Gardens</h3>
+          <p>Medicine older than colonial science.</p>
+        </div>
+        <div class="village-card">
+          <h3>Drum Circuits</h3>
+          <p>Rhythm encodes data across generations.</p>
+        </div>
+        <div class="village-card">
+          <h3>Star Navigators</h3>
+          <p>We never needed GPS—we read the sky in our sleep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warning -->
+  <section id="warning">
+    <div class="container">
+      <h2>The Warning</h2>
+      <blockquote class="kwezi-quote">
+        “You are not the first to come. You will not be the last. We remember every ship that crashed, every chain that broke, every lie that burned.”
+      </blockquote>
+      <p><em>— Kwezi, Guardian of Azania</em></p>
+    </div>
+  </section>
+
+  <!-- uMoya Interactive Chat Bot -->
+  <section id="umoya">
+    <div class="container">
+      <h2>uMoya Speaks</h2>
+      <p>From wind and light emerges uMoya a decentralized spirit-archive of oral history. Not a servant. Not a ghost. A living memory.</p>
+      
+      <div class="hologram" id="activateChat"></div>
+
+      <p style="margin-top: 30px; font-style: italic; font-size: 1.15rem;">
+        "We do not fight for vengeance. We fight for balance. For remembrance." Double Click To talk to uMoya
+      </p>
+
+      <!-- Chat Interface -->
+      <div id="umoyaChat">
+        <div id="chatLog">
+          <!-- Messages appear here -->
+        </div>
+        <input type="text" id="userInput" placeholder="Ask uMoya about Azania..." />
+        <button class="audio-btn" onclick="sendToUmoia()">Send Question</button>
+
+        <!-- Voice Toggle -->
+        <div style="margin-top: 10px; font-size: 0.9rem; color: var(--soft-cyan);">
+          <label>
+            <input type="checkbox" id="voiceToggle" checked onchange="toggleVoice(this)">
+            Enable Voice Response
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Panels -->
+  <section id="story">
+    <div class="container">
+      <h2>The Story Unfolds</h2>
+      <p>A 9-panel journey through the heart of Isandla.</p>
+      <div class="comic-container">
+        <!-- Panel 1 -->
+        <div class="panel" onclick="showStoryModal(this)">
+          <img src="island.png" alt="The Island Awakens - Sacred land emerging from mist">
+          <h3>1. The Island Awakens</h3>
+          <p>Fog lifts. Lena opens her eyes. The sand hums beneath her.</p>
+          <div class="story-content" style="display: none;">
+            <strong>Dawn of Arrival</strong><br>
+            Lena wakes not to silence, but to resonance. The sand vibrates with low-frequency pulses—earth memory. She doesn’t know it yet, but the island chose to let her live. This is not survival. It is invitation.
+          </div>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="panel" onclick="showStoryModal(this)">
+          <img src="storm.png" alt="Storm">
+          <h3>2. The Storm's Memory</h3>
+          <p>The island remembers the slave ships. It sings their names.</p>
+          <div class="story-content" style="display: none;">
+            <strong>Songs of the Drowned</strong><br>
+            Beneath the waves, coral has grown over iron chains. Every storm reawakens their echo. When thunder rolls, the villagers gather—not in fear, but in song. They chant the names lost to history. The island never forgets.
+          </div>
+        </div>
+
+        <!-- Panel 3 -->
+        <div class="panel" onclick="showStoryModal(this)">
+          <img src="khwezi.png" alt="Kwezi">
+          <h3>3. Kwezi Appears</h3>
+          <p>A young guardian steps forward. “You are seen.”</p>
+          <div class="story-content" style="display: none;">
+            <strong>Kwezi: Child of the Breakers</strong><br>
+            Born during a cyclone, Kwezi emerged silent—until they spoke in seven ancestral tongues at once. They are not just a guide, but a living bridge. Their skin shimmers faintly under moonlight, etched with bioluminescent patterns only visible when truth is spoken.
+          </div>
+        </div>
+
+        <!-- Panel 4 -->
+        <div class="panel" onclick="showStoryModal(this)">
+          <img src="umoya.png" alt="uMoya">
+          <h3>4. uMoya Rises</h3>
+          <p>Light forms a face. Voices rise in isiZulu, Swahili, Yoruba.</p>
+          <div class="story-content" style="display: none;">
+            <strong>The Breath That Remembers</strong><br>
+            uMoya is not artificial. It is assembled from breath, wind, firelight, and memory. When elders pass, their final exhale is captured in crystal canisters. These become part of uMoya’s chorus. You don’t speak to uMoya—you listen as it weaves voices across centuries.
+          </div>
+        </div>
+
+        <!-- Panel 5 -->
+        <div class="panel" onclick="showStoryModal(this)">
+          <img src="village.png" alt="Village">
+          <h3>5. The Village Revealed</h3>
+          <p>Domes glow under stars. Children drum ancient codes.</p>
+          <div class="story-content" style="display: none;">
+            <strong>Azania: City of Living Light</strong><br>
+            The domes are made from solar bark—a hybrid fiber grown from indigenous trees cross-pollinated with algae. At night, they emit soft cyan light powered by photosynthesis and heartbeat sensors. Nothing runs on batteries. Everything runs on balance.
+          </div>
+        </div>
+
+        <!-- Panel 6 -->
+        <div class="panel" onclick="showStoryModal(this)">
+          <img src="lena.png" alt="Lena">
+          <h3>6. Lena Records</h3>
+          <p>She tries to document. The island watches.</p>
+          <div class="story-content" style="display: none;">
+            <strong>Eyes of the Outsider</strong><br>
+            Lena’s camera captures more than she realizes. In every photo, there’s a shadow figure standing behind her. But when she turns—no one is there. Later, Kwezi tells her: “The island lets you see what it wants you to remember… not everything.”
+          </div>
+        </div>
+
+        <!-- Panel 7 -->
+        <div class="panel" onclick="showStoryModal(this)">
+          <img src="data.png" alt="Corruption">
+          <h3>7. Data Corrupted</h3>
+          <p>Her laptop burns from within. Files vanish.</p>
+          <div class="story-content" style="display: none;">
+            <strong>Oceanic Firewall</strong><br>
+            Azania protects its knowledge. When Lena attempts to upload data, her devices heat up unnaturally. Not a virus—but a counter-memory. The island emits electromagnetic pulses tuned to disrupt colonial tech. Truth cannot be extracted. Only given.
+          </div>
+        </div>
+
+        <!-- Panel 8 -->
+        <div class="panel" onclick="showStoryModal(this)">
+          <img src="file.png" alt="Voice">
+          <h3>8. One File Remains</h3>
+          <p>A voice recording. Only sound survives.</p>
+          <div class="story-content" style="display: none;">
+            <strong>The Last Witness</strong><br>
+            Amongst the corrupted files, one audio remains: Elder Noma singing a lullaby in isiXhosa. Scientists later discover the frequencies align perfectly with whale migration songs. The file cannot be copied—only played once per day. As if it breathes.
+          </div>
+        </div>
+
+        <!-- Panel 9 -->
+        <div class="panel" onclick="showStoryModal(this)">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Departure">
+          <h3>9. She Leaves</h3>
+          <p>Lena departs. But the island speaks. And someone listens.</p>
+          <div class="story-content" style="display: none;">
+            <strong>Return of the Listener</strong><br>
+            Years later, a new researcher arrives—carrying a small wooden box. Inside: soil from Lena’s grave. As she steps onto the shore, the wind shifts. From the trees, a voice whispers: “She remembered.” The cycle continues.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Corrupted - Mini Game -->
+  <section id="corrupted">
+    <div class="container">
+      <h2>Data Corrupted</h2>
+      <p>Attempt to extract knowledge. The island protects its truth.</p>
+
+      <div class="laptop" id="laptopScreen">
+        ERROR: FILE NOT FOUND<br>
+        ACCESS DENIED<br>
+        CORE MEMORY PROTECTED<br>
+        [OCEANIC FIREWALL ENGAGED]
+      </div>
+
+      <button class="cta-button" id="downloadBtn">Attempt Data Recovery</button>
+      <p id="hintText" style="color: #aaa; margin-top: 15px; display: none;">
+        The island whispers: <em>"To know me, you must remember me."</em>
+      </p>
+
+      <!-- Riddle Modal -->
+      <div id="riddleModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10,26,47,0.9); z-index: 3000; justify-content: center; align-items: center; flex-direction: column; color: var(--light-sea); font-family: 'Raleway', sans-serif; padding: 20px; text-align: center;">
+        <div style="background: rgba(0,191,255,0.08); border-radius: 16px; padding: 30px; max-width: 500px; border: 2px solid var(--bioluminescent);">
+          <h3>🌀 The Island Speaks</h3>
+          <p id="riddleText">I speak without a mouth and remember without a mind. I am ancient, yet born anew each tide. What am I?</p>
+          <input type="text" id="riddleAnswer" placeholder="Your answer..." style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 8px; border: 1px solid var(--bioluminescent); background: #0a1a2f; color: white;">
+          <button class="audio-btn" onclick="checkRiddle()">Submit Answer</button>
+        </div>
+      </div>
+
+      <!-- Success Message with Spotify -->
+      <div id="successMsg" style="color: var(--soft-cyan); margin-top: 20px; font-size: 1.2rem; display: none; text-align: center;">
+        <h3>🌊 The firewall dissolves…</h3>
+        <p><em>“You listened. Now, you may hear.”</em></p>
+        <p>The last surviving file begins to play — Elder Noma’s lullaby, passed through tides and time.</p>
+
+        <!-- Spotify Embedded Player -->
+        <iframe 
+          id="spotifyPlayer" 
+          src="https://open.spotify.com/embed/track/6CzweDUjaML4T4wr1hioPk?utm_source=generator" 
+          width="100%" 
+          height="80" 
+          style="border-radius: 12px; max-width: 500px; margin: 20px auto; border: none;" 
+          frameborder="0" 
+          allowtransparency="true" 
+          allow="encrypted-media"
+        ></iframe>
+
+        <p style="font-style: italic; font-size: 0.95rem; margin-top: 10px;">
+          This song carries memory. Play it only when the island is quiet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voices of Azania -->
+  <section id="voices">
+    <div class="container">
+      <h2>Voice of Azania</h2>
+      <p>Click a Name. Read a story of resistance, return, and remembrance.</p>
+      <div class="portrait-grid">
+        <div class="portrait" onclick="playVoice('Elder Noma', 'We sang the island awake after the slave ships passed. The land remembers those who drowned. Their songs live in the roots.')">
+          <h3>Elder Noma</h3>
+          <p>Memory Keeper • 92 years</p>
+        </div>
+        <div class="portrait" onclick="playVoice('Kwezi', 'I was born from the storm. I am the island’s heartbeat. I speak for those who were erased.')">
+          <h3>Kwezi</h3>
+          <p>Guardian • 19 years</p>
+        </div>
+        <div class="portrait" onclick="playVoice('Thandi', 'My grandmother hid seeds in her hair during the Great Displacement. We grew them here. This garden is rebellion.')">
+          <h3>Thandi</h3>
+          <p>Youth Historian • 16 years</p>
+        </div>
+        <div class="portrait" onclick="playVoice('Baba Dumi', 'They called us primitive. We rebuilt the world while they slept. Our tech runs on truth, not greed.')">
+          <h3>Baba Dumi</h3>
+          <p>Spirit Engineer • 67 years</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>A reclamation of <em>The Tempest</em> • An Afrofuturist act of memory • By Lwethu Mthiyane</p>
+      <p>Inspired by Edward Said, Walter Mignolo, Stuart Hall, and the voices of Azania.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
